@@ -5,7 +5,7 @@ async function cargarReportes(){
     try{
 
         const respuesta =
-        await fetch(API_URL);
+        await fetch(API);
 
         const datos =
         await respuesta.json();

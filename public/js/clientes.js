@@ -45,7 +45,7 @@ async function cargarClientes(){
 
     try{
 
-        const respuesta = await fetch(API_URL);
+        const respuesta = await fetch(API);
 
         const clientes = await respuesta.json();
 
