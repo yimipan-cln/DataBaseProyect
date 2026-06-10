@@ -28,6 +28,8 @@
 
 </div>
 
+<script src="js/config.js"></script>
+
 <script>
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -36,9 +38,9 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      nombre: nombre.value,
-      email: email.value,
-      password: password.value
+      nombre: document.getElementById("nombre").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value
     })
   });
 
