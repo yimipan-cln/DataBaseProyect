@@ -1,4 +1,4 @@
-const API_URL = `${API_URL}/reportes`;
+const API = `${API_URL}/reportes`;
 
 async function cargarReportes(){
 

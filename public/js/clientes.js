@@ -1,4 +1,4 @@
-const API_URL = `${API_URL}/clientes`;
+const API = `${API_URL}/clientes`;
 
 const formCliente = document.getElementById("formCliente");
 const tablaClientes = document.getElementById("tablaClientes");
