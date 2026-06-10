@@ -49,4 +49,27 @@ router.post("/login", async (req, res) => {
   }
 });
 
+router.get("/verify", (req, res) => {
+  try {
+    const token = req.headers.authorization;
+
+    if (!token) {
+      return res.status(401).json({ error: "No token" });
+    }
+
+    // quitar "Bearer " si viene incluido
+    const cleanToken = token.replace("Bearer ", "");
+
+    const decoded = jwt.verify(cleanToken, "secreto_super_seguro");
+
+    res.json({
+      ok: true,
+      user: decoded
+    });
+
+  } catch (error) {
+    res.status(401).json({ error: "Token inválido" });
+  }
+});
+
 module.exports = router;

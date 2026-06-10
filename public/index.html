@@ -18,8 +18,8 @@
   // validar token con backend
   fetch(`${API_URL}/auth/verify`, {
     headers: {
-    Authorization: token
-  }
+    Authorization: `Bearer ${token}`
+    }
   })
   .then(res => {
   if (!res.ok) {
