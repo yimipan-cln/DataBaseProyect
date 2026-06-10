@@ -17,7 +17,7 @@ formCliente.addEventListener("submit", async (e)=>{
 
     try {
 
-        await fetch(API_URL, {
+        await fetch(`${API_URL}/clientes`, {
 
             method:"POST",
 

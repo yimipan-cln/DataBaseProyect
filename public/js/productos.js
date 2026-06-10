@@ -18,8 +18,7 @@ formProducto.addEventListener("submit", async (e) => {
 
     try {
 
-        await fetch(API_URL, {
-
+        await fetch(`${API_URL}/productos`, {
             method: "POST",
 
             headers: {

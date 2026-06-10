@@ -140,7 +140,7 @@ async function registrarVenta(){
     try{
 
         const respuesta =
-        await fetch(API_URL,{
+        await fetch(`${API_URL}/ventas`, {
 
             method:"POST",
 
