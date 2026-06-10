@@ -45,7 +45,7 @@ async function cargarProductos() {
 
     try {
 
-        const respuesta = await fetch(API_URL);
+        const respuesta = await fetch(API);
 
         const productos = await respuesta.json();
 
