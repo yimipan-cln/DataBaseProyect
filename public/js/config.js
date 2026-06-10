@@ -1,0 +1,1 @@
+const API_URL = "https://techstore-backend-wifd.onrender.com";

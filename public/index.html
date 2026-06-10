@@ -8,12 +8,29 @@
 </head>
 <body>
 
+<script src="js/config.js"></script>
 <script>
   const token = localStorage.getItem("token");
 
-  if (!token) {
+  if (!token || token === "null") {
     window.location.href = "/login.html";
   }
+  // validar token con backend
+  fetch(`${API_URL}/auth/verify`, {
+    headers: {
+    Authorization: token
+  }
+  })
+  .then(res => {
+  if (!res.ok) {
+    localStorage.removeItem("token");
+    window.location.href = "/login.html";
+  }
+  })
+  .catch(() => {
+  localStorage.removeItem("token");
+  window.location.href = "/login.html";
+  });
 </script>
 
 <div class="container mt-5">

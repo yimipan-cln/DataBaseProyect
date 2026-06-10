@@ -1,6 +1,6 @@
-const API_URL = "http://localhost:3000/ventas";
-const API_CLIENTES = "http://localhost:3000/clientes";
-const API_PRODUCTOS = "http://localhost:3000/productos";
+const API_VENTAS = `${API_URL}/ventas`;
+const API_CLIENTES = `${API_URL}/clientes`;
+const API_PRODUCTOS = `${API_URL}/productos`;
 
 let productosVenta = [];
 

@@ -1,5 +1,4 @@
-const API_URL =
-"http://localhost:3000/reportes";
+const API_URL = `${API_URL}/reportes`;
 
 async function cargarReportes(){
 
