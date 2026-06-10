@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TechStore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<script>
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    window.location.href = "/login.html";
+  }
+</script>
+
+<div class="container mt-5">
+
+    <h1 class="text-center">TechStore</h1>
+
+    <div class="list-group mt-4">
+
+        <a href="productos.html" class="list-group-item list-group-item-action">
+            Productos
+        </a>
+
+        <a href="clientes.html" class="list-group-item list-group-item-action">
+            Clientes
+        </a>
+
+        <a href="ventas.html" class="list-group-item list-group-item-action">
+            Ventas
+        </a>
+
+        <a href="reportes.html" class="list-group-item list-group-item-action">
+            Reportes
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
